@@ -1,4 +1,3 @@
-package AssignmentsWeek1
 import java.util.Scanner;
 
 public class Problem1 {
