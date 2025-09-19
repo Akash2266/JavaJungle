@@ -1,24 +1,11 @@
-import java.util.Scanner;
-
 public class Problem4 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int num1, num2, num3;
+          int [] arr = {10, 20, 30, 40, 50, 60};
+          int i;
 
-
-        num1 = scan.nextInt();
-        num2 = scan.nextInt();
-        num3 = scan.nextInt();
-
-          if (num1 > num2 && num1 > num3)
-              System.out.println(num1);
-
-          else if (num2 > num1 && num2 > num3)
-              System.out.println(num2);
-
-          else
-              System.out.println(num3);
-
-
+               for (i=0; i< arr.length; i++){
+                   if (i%2 == 0)
+                       System.out.print(arr[i] +" ");
+               }
     }
 }

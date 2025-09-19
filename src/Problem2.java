@@ -1,19 +1,25 @@
-import java.util.Scanner;
-
 public class Problem2 {
     public static void main(String[] args) {
-                 Scanner scan = new Scanner(System.in);
-                 int balance;
+          int[] arr = {14, 28, 19, 33, 45, 12};
+          int i, max, index=0, secondLargest;
+          max = arr[0];
+          secondLargest = arr[1];
 
-                 balance = scan.nextInt();
 
-               if (balance > 0)
-                 System.out.println("Positive Balance");
+            for (i=0; i<arr.length; i++){
+                   if (arr[i] > max){
+                       max = arr[i];
+                       index = i;
+                   }
+            }
 
-            else if (balance < 0)
-                System.out.println("Overdraft");
+              for (i=0; i<arr.length; i++){
+                    if (i == index)
+                        continue;
 
-            else
-                System.out.println("Zero Balance");
+                    else if (arr[i] > secondLargest)
+                        secondLargest = arr[i];
+              }
+        System.out.println("Second Largest Element: "+secondLargest);
     }
 }

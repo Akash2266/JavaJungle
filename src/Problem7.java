@@ -1,25 +1,23 @@
-import java.util.Scanner;
-
 public class Problem7 {
     public static void main(String[] args) {
-            Scanner scan = new Scanner(System.in);
-            int num1, num2;
-            int op;
+            int n=153;
+            int cpy1=n, cpy2=n;
+            int digits=0, rem, armstrong=0;
 
-            num1 = scan.nextInt();
-            num2 = scan.nextInt();
-            op = scan.nextInt();
+               while (cpy1 != 0){
+                  cpy1 /= 10;
+                  digits++;
+               }
 
-              if (op == 1)
-                  System.out.println(num1+num2);
+                 while (cpy2 != 0){
+                     rem = cpy2%10;
+                     armstrong += Math.pow(rem, digits);
+                     cpy2 /= 10;
+                 }
 
-              else if (op == 2)
-                  System.out.println(num1-num2);
-
-              else if (op == 3)
-                  System.out.println(num1*num2);
-
-              else
-                  System.out.println(num1/num2);
+                   if (n == armstrong)
+                       System.out.println("Armstrong");
+                   else
+                       System.out.println("!Armstrong");
     }
 }

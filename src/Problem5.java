@@ -1,25 +1,13 @@
-import java.util.Scanner;
-
 public class Problem5 {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int year;
+          int n = 12345;
+          int rev=0, rem;
 
-          year = scan.nextInt();
-
-           if (year%100 == 0){
-                 if (year%400 == 0)
-                     System.out.println("Leap Year");
-
-                 else
-                     System.out.println("Not a Leap Year");
-           }
-             else {
-                 if (year%4 == 0)
-                     System.out.println("Leap Year");
-
-                 else
-                     System.out.println("Not a Leap Year");
-           }
+             while (n != 0) {
+                 rem = n%10;
+                 rev = rev*10+rem;
+                 n /= 10;
+        }
+        System.out.println(rev);
     }
 }
