@@ -1,24 +1,49 @@
+  import java.text.AttributedCharacterIterator;
+  import java.util.Scanner;
+
+    class Book {
+        String tile, author;
+        int price;
+
+           Book (){
+               Scanner scanner = new Scanner(System.in);
+
+               System.out.print("Title of the Book: ");
+               tile = scanner.next();
+
+               System.out.print("Author of the Book: ");
+               author = scanner.next();
+
+               System.out.print("Price: ");
+               price = scanner.nextInt();
+           }
+
+             Book (String title, String author, int price){
+                 System.out.println();
+
+                 this.tile = title;
+                 this.author = author;
+                 this.price = price;
+           }
+
+                void printBookDetails (){
+                    System.out.println();
+
+                    System.out.println("BOOK DETAILS: ");
+                    System.out.println("=======================");
+                    System.out.println("Title: "+tile);
+                    System.out.println("Author: "+author);
+                    System.out.println("Price: "+price);
+                }
+
+    }
+
 public class Problem3 {
     public static void main(String[] args) {
-        int[] arr = new int[]{2, 4, 2, 6, 2, 9, 6};
-        int visited = -1;
+             Book book1 = new Book();
+             book1.printBookDetails();
 
-        for(int i = 0; i < arr.length; ++i) {
-            if (arr[i] != -1) {
-                int count = 1;
-
-                for(int j = i + 1; j < arr.length; ++j) {
-                    if (arr[i] == arr[j]) {
-                        ++count;
-                        arr[j] = visited;
-                    }
-                }
-
-                if (count > 1) {
-                    System.out.print(arr[i] + " appears " + count);
-                }
-            }
-        }
-
+             Book book2 = new Book("Chamber_of_Secrets", "ROWLING",2999);
+             book2.printBookDetails();
     }
 }
