@@ -1,5 +1,4 @@
-  import java.text.AttributedCharacterIterator;
-  import java.util.Scanner;
+import java.util.Scanner;
 
     class Book {
         String tile, author;
